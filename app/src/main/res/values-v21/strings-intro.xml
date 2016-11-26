@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_intro_done">demarrer</string>
+    <string name="title_activity_intro_next">suivant</string>
+    <string name="title_activity_intro_skip">passer</string>
+    <string name="title_activity_intro_1">Trouvez les meilleurs plats tunisiens</string>
+    <string name="title_activity_intro_2">Choisissez vos plats et mettez les dans votre liste de favories</string>
+    <string name="title_activity_intro_3">Partagez vos plats avec vos amis sur les réseaux sociaux</string>
+    <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
+
+</resources>
