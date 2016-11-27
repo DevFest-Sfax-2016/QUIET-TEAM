@@ -3,9 +3,10 @@
     <string name="title_activity_intro_done">demarrer</string>
     <string name="title_activity_intro_next">suivant</string>
     <string name="title_activity_intro_skip">passer</string>
-    <string name="title_activity_intro_1">Trouvez les meilleurs plats tunisiens</string>
-    <string name="title_activity_intro_2">Choisissez vos plats et mettez les dans votre liste de favories</string>
-    <string name="title_activity_intro_3">Partagez vos plats avec vos amis sur les réseaux sociaux</string>
+    <string name="title_activity_intro_1">Title 1</string>
+    <string name="title_activity_intro_2">Title 2</string>
+    <string name="title_activity_intro_3">Title 3</string>
     <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
+
 
 </resources>

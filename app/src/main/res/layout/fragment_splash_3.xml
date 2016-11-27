@@ -10,7 +10,7 @@
         android:layout_centerInParent="true"
         android:id="@+id/imageView_intro_3"
         android:layout_marginTop="10dp"
-        android:background="@drawable/thakarni_intro_4" />
+        android:background="@drawable/ccc" />
 
     <TextView
         android:id="@+id/splach_3_title"

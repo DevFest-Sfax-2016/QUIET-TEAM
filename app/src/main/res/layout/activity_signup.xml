@@ -22,7 +22,7 @@
         android:textSize="30sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:text="Firebase"/>
+        android:text="Family"/>
 
     <TextView
         android:layout_width="wrap_content"
