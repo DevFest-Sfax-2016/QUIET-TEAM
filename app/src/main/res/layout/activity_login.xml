@@ -61,17 +61,31 @@
         android:hint="Password"
         android:drawableLeft="@drawable/password"/>
 
-    <Button
-        android:id="@+id/LoginButtonId"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginRight="32dp"
-        android:textColor="@color/white"
-        android:background="@drawable/button_login_form"
-        android:text="Login"/>
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+        <Button
+            android:id="@+id/LoginButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="32dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_login_form"
+            android:text="Login"/>
+
+        <Button
+            android:id="@+id/loginAnonymous"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="65dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_login_form"
+            android:text="Anonymous" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/TextViewaccount"
         android:layout_width="wrap_content"

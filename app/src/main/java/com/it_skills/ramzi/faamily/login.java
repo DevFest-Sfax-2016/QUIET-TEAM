@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,13 +17,15 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class login extends AppCompatActivity implements View.OnClickListener{
     private EditText Username, Password;
-    private Button LoginButton;
+    private Button LoginButton,buttonAnynomecse;
     private TextView signupLogin;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
+    FirebaseAuth.AuthStateListener mAuthlistener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +41,36 @@ public class login extends AppCompatActivity implements View.OnClickListener{
         signupLogin = (TextView) findViewById(R.id.TextViewaccount);
         LoginButton = (Button) findViewById(R.id.LoginButtonId);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        buttonAnynomecse=(Button)findViewById(R.id.loginAnonymous);
+        mAuthlistener= new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user=firebaseAuth.getCurrentUser();
+                if(user==null){
+                //important
+                }
+                else {
+                    Log.d("SignIn",user.getUid());
+
+                }
+
+            }
+        };
         signupLogin.setOnClickListener(this);
         LoginButton.setOnClickListener(this);
+        buttonAnynomecse.setOnClickListener(this);
+
+    }
+    @Override
+    public void onStart(){
+        super.onStart();
+        auth.addAuthStateListener(mAuthlistener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        auth.removeAuthStateListener(mAuthlistener);
     }
 
     @Override
@@ -51,8 +82,25 @@ public class login extends AppCompatActivity implements View.OnClickListener{
             case R.id.TextViewaccount:
                 finish();
                 startActivity(new Intent(this, signup.class));
+            case R.id.loginAnonymous:
+                loginAnonymous();
                 break;
         }
+    }
+
+    private void loginAnonymous() {
+        auth.signInAnonymously().addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()){
+                        startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+                    }else {
+                        Toast.makeText(getApplicationContext(),"error login !! ",Toast.LENGTH_SHORT).show();
+                    }
+            }
+        });
+
+
     }
 
     private void Userlogin() {
@@ -91,10 +139,14 @@ public class login extends AppCompatActivity implements View.OnClickListener{
 
                             }
                         } else {
-                            Toast.makeText(login.this, "is not Successful", Toast.LENGTH_LONG).show();
+//                            Toast.makeText(login.this, "is not Successful", Toast.LENGTH_LONG).show();
+//                            finish();
+                            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                            startActivity(intent);
                             finish();
                         }
                     }
                 });
     }
+
 }
