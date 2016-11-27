@@ -1,4 +1,4 @@
-package com.it_skills.ramzi.faamily.fragments;
+package com.it_skills.ramzi.faamily.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

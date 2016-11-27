@@ -1,4 +1,4 @@
-package com.it_skills.ramzi.faamily.fragments;
+package com.it_skills.ramzi.faamily.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,12 +13,12 @@ import com.it_skills.ramzi.faamily.R;
  * Created by ramzi on 26/11/16.
  */
 
-public class SplashFragment1 extends Fragment {
+public class SplashFragment2 extends Fragment {
 
     private TextView mTextview;
 
-    public static SplashFragment1 newInstance() {
-        SplashFragment1 fragment = new SplashFragment1();
+    public static SplashFragment2 newInstance() {
+        SplashFragment2 fragment = new SplashFragment2();
         return fragment;
     }
 
@@ -27,7 +27,7 @@ public class SplashFragment1 extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(
-                R.layout.fragment_splash_1, container, false);
+                R.layout.fragment_splash_2, container, false);
 
         initView(view);
 
@@ -36,7 +36,8 @@ public class SplashFragment1 extends Fragment {
 
     private void initView(View view) {
 
-        mTextview =  (TextView) view.findViewById(R.id.splach_1_title);
-        mTextview.setText(getResources().getString(R.string.title_activity_intro_1));
+        mTextview =  (TextView) view.findViewById(R.id.splach_2_title);
+        mTextview.setText(getResources().getString(R.string.title_activity_intro_2));
     }
 }
+
