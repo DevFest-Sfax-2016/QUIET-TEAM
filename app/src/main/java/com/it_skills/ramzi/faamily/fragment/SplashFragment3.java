@@ -37,6 +37,6 @@ public class SplashFragment3 extends Fragment {
     private void initView(View view) {
 
         mTextview =  (TextView) view.findViewById(R.id.splach_3_title);
-        mTextview.setText(getResources().getString(R.string.title_activity_intro_3));
+        mTextview.setText("Trouver l localisation de votre ami/e ou b1 famille avec Map ");
     }
 }

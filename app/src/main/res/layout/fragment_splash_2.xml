@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FD6C9E">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/imageView_intro_2"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/family2" />
+
+    <TextView
+        android:id="@+id/splach_2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="text"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/imageView_intro_2"
+        android:layout_centerInParent="true"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="26dp" />
+
+</RelativeLayout>

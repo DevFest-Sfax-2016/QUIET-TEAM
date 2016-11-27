@@ -37,7 +37,7 @@ public class SplashFragment2 extends Fragment {
     private void initView(View view) {
 
         mTextview =  (TextView) view.findViewById(R.id.splach_2_title);
-        mTextview.setText(getResources().getString(R.string.title_activity_intro_2));
+        mTextview.setText("bhjkvbkzvs");
     }
 }
 

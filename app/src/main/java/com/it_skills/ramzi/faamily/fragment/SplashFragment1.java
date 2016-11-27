@@ -37,6 +37,6 @@ public class SplashFragment1 extends Fragment {
     private void initView(View view) {
 
         mTextview =  (TextView) view.findViewById(R.id.splach_1_title);
-        mTextview.setText(getResources().getString(R.string.title_activity_intro_1));
+        mTextview.setText("Changer votre Idéé");
     }
 }
